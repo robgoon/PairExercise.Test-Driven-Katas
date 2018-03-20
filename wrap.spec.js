@@ -16,9 +16,16 @@ describe('wrap', () => {
         expect(wrap("Wicked Witch of the West", 0)).to.equal("");
     });
 
-    it('Correctly wraps lorem ipsum statement', () => {
+    it('Correctly wraps statements given length', () => {
         expect(wrap("Lorem ipsum dolor sit eu amet, elit na magna sem amet nulla vel purus ac ligula.", 20))
-        .to.equal("Lorem ipsum dolor\nsit eu amet, elit na\nmagna sem amet nulla\nvel purus ac ligula.");
+          .to.equal("Lorem ipsum dolor\nsit eu amet, elit na\nmagna sem amet nulla\nvel purus ac ligula.");
+        expect(wrap('How are you today?', 7))
+          .to.equal('How are\nyou\ntoday?')
+    });
+
+    it('Correctly wraps one word with spaces', () => {
+      expect(wrap('How     ', 4))
+        .to.equal('How \n   ')
     });
 });
 

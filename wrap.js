@@ -17,6 +17,6 @@ const wrap = (line, maxLen) => {
     return line.substring(0, split) + "\n" + wrap(line.substring(split + offset), maxLen);
 };
 
-console.log(wrap("Lorem ipsum dolor sit eu amet, elit na magna sem amet nulla vel purus ac ligula.", 20));
+// console.log(wrap("Lorem ipsum dolor sit eu amet, elit na magna sem amet nulla vel purus ac ligula.", 20));
 
 module.exports = wrap;
